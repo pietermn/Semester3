@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>dbAPI_Logic</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Containers\" />
+    <None Remove="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Containers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dbAPI-Interface\dbAPI-Interface.csproj" />
+    <ProjectReference Include="..\dbAPI-DTO\dbAPI-DTO.csproj" />
+    <ProjectReference Include="..\dbAPI-DAL\dbAPI-DAL.csproj" />
+    <ProjectReference Include="..\dbAPI-Interface-DAL\dbAPI-Interface-DAL.csproj" />
+    <ProjectReference Include="..\dbAPI-DAL\dbAPI-DAL.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>saAPI_Logic</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Containers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Containers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\saAPI-Interfaces\saAPI-Interfaces.csproj" />
+    <ProjectReference Include="..\saAPI-DAL\saAPI-DAL.csproj" />
+    <ProjectReference Include="..\saAPI-Interface-DAL\saAPI-Interface-DAL.csproj" />
+    <ProjectReference Include="..\saAPI-enums\saAPI-enums.csproj" />
+    <ProjectReference Include="..\saAPI-DTO\saAPI-DTO.csproj" />
+  </ItemGroup>
+</Project>

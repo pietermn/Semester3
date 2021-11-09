@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>saAPI_DAL</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\saAPI-Interface-DAL\saAPI-Interface-DAL.csproj" />
+    <ProjectReference Include="..\saAPI-enums\saAPI-enums.csproj" />
+    <ProjectReference Include="..\saAPI-DTO\saAPI-DTO.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Flurl.Http" />
+    <None Remove="Flurl" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Flurl.Http" Version="3.2.0" />
+    <PackageReference Include="Flurl" Version="3.0.2" />
+  </ItemGroup>
+</Project>

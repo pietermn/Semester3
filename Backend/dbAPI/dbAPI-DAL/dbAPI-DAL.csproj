@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>dbAPI_DAL</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="MySql.EntityFrameworkCore" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.11" />
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.8" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dbAPI-DTO\dbAPI-DTO.csproj" />
+    <ProjectReference Include="..\dbAPI-Interface-DAL\dbAPI-Interface-DAL.csproj" />
+  </ItemGroup>
+</Project>

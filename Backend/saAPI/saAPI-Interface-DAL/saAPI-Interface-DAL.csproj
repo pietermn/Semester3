@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>saAPI_Interface_DAL</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\saAPI-DTO\saAPI-DTO.csproj" />
+    <ProjectReference Include="..\saAPI-enums\saAPI-enums.csproj" />
+  </ItemGroup>
+</Project>
