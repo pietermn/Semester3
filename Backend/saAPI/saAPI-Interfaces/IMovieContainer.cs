@@ -8,6 +8,6 @@ namespace saAPI_Interfaces
 {
     public interface IMovieContainer
     {
-        public Task<List<MovieDTO>> GetMovies(services service, types type);
+        public Task<List<MovieDTO>> GetMoviesAsync(services service, types type);
     }
 }

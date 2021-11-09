@@ -16,7 +16,7 @@ namespace saAPI_Logic.Containers
             _movieDAL = movieDAL;
         }
 
-        public async Task<List<MovieDTO>> GetMovies(services service, types type)
+        public async Task<List<MovieDTO>> GetMoviesAsync(services service, types type)
         {
             return await _movieDAL.GetMoviesAsync(service, type);
         }

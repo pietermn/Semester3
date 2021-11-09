@@ -22,35 +22,12 @@ namespace saAPI.Controllers
             _movieContainer = movieContainer;
         }
 
-        //[HttpGet]
-        //[Route("Read")]
-        //public async Task<ActionResult> ReadAsync()
-        //{
-        //    var client = new HttpClient();
-        //    var request = new HttpRequestMessage
-        //    {
-        //        Method = HttpMethod.Get,
-        //        RequestUri = new Uri("https://streaming-availability.p.rapidapi.com/search/basic?country=us&service=netflix&type=movie&genre=18&page=1&output_language=en&language=en"),
-        //        Headers =
-        //        {
-        //            { "x-rapidapi-host", "streaming-availability.p.rapidapi.com" },
-        //            { "x-rapidapi-key", "6c7c427870msh77540ee5ce1cf0fp1589f8jsn9777cc8b6bb4" },
-        //        },
-        //    };
-        //    var response = await client.SendAsync(request);
-        //    using (response)
-        //    {
-        //        response.EnsureSuccessStatusCode();
-        //        var body = await response.Content.ReadAsStringAsync();
-        //        return Ok(body);
-        //    }
-        //}
-
         [HttpGet]
         [Route("Read")]
-        public IActionResult Read(services service, types type)
+        public async Task<ActionResult> Read(services service, types type)
         {
-            return Ok(_movieContainer.GetMovies(service, type));
+            List<MovieDTO> movies = await _movieContainer.GetMoviesAsync(service, type);
+            return Ok(movies);
         }
     }
 }

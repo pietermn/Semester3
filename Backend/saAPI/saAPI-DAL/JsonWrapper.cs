@@ -25,7 +25,7 @@ namespace saAPI_DAL
             public string original { get; set; }
         }
 
-        public class Us
+        public class Nl
         {
             public string link { get; set; }
             public int added { get; set; }
@@ -34,7 +34,7 @@ namespace saAPI_DAL
 
         public class Netflix
         {
-            public Us us { get; set; }
+            public Nl nl { get; set; }
         }
 
         public class StreamingInfo
