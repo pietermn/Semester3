@@ -15,7 +15,9 @@ using saAPI_Interface_DAL;
 using saAPI_Interfaces;
 using saAPI_Logic.Containers;
 using saAPI_DAL;
+using Microsoft.OpenApi.Models;
 using System.Text.Json;
+using DotNetEnv;
 
 namespace saAPI
 {
@@ -31,13 +33,21 @@ namespace saAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            Env.TraversePath().Load();
+            string apiKey = Env.GetString("ApiKey");
+
             services.AddScoped<IMovieContainer, MovieContainer>();
             services.AddScoped<IMovieDAL, MovieDAL>();
 
             services.AddControllersWithViews()
                 .AddNewtonsoftJson(options =>
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-);
+            );
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "dbApi", Version = "v1" });
+            });
 
         }
 
@@ -47,6 +57,8 @@ namespace saAPI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "saApi v1"));
             }
 
             app.UseHttpsRedirection();

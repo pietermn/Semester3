@@ -8,6 +8,7 @@
     <None Remove="Controllers\" />
     <None Remove="Swashbuckle.AspNetCore" />
     <None Remove="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" />
+    <None Remove="DotNetEnv" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -32,5 +33,6 @@
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+    <PackageReference Include="DotNetEnv" Version="2.2.0" />
   </ItemGroup>
 </Project>

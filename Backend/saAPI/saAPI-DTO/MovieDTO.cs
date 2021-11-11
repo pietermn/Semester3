@@ -3,21 +3,14 @@ using System.Collections.Generic;
 
 namespace saAPI_DTO
 {
-    public class Nl
+    public class StreamingInfo
     {
+        public string Service { get; set; }
+        public string Country { get; set; }
         public string link { get; set; }
         public int added { get; set; }
         public int leaving { get; set; }
-    }
 
-    public class Netflix
-    {
-        public Nl nl { get; set; }
-    }
-
-    public class StreamingInfo
-    {
-        public Netflix netflix { get; set; }
     }
 
     public class MovieDTO

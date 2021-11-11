@@ -16,6 +16,7 @@ using dbAPI_Interface;
 using dbAPI_Interface_DAL;
 using dbAPI_Logic.Containers;
 using Microsoft.OpenApi.Models;
+using DotNetEnv;
 
 namespace dbAPI
 {
@@ -31,7 +32,16 @@ namespace dbAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DBContext>(options => options.UseMySQL("server=localhost;port=3307;user=root;password=root;database=db"));
+            Env.TraversePath().Load();
+            string connectionString = Env.GetString("ConnectionString");
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                services.AddDbContext<DBContext>(options => options.UseMySQL("server=localhost;port=3307;user=root;password=root;database=db"));
+            }
+            else
+            {
+                services.AddDbContext<DBContext>(options => options.UseMySQL(connectionString));
+            }
 
             services.AddScoped<IWatchListContainer, WatchListContainer>();
             

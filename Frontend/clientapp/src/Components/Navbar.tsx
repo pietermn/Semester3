@@ -1,7 +1,7 @@
 import {
     Link
   } from "react-router-dom";
-import '../Style/Navbar.css';
+import '../Style/Components/Navbar.css';
 import { AiOutlineSearch, AiOutlineUser, AiFillPlayCircle } from 'react-icons/ai';
 
 
