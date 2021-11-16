@@ -1,9 +1,28 @@
-import '../Style/Homepage.css';
+import { GetMovies } from "../saApi/requests/movies";
+import { Movie } from "../globalTypes";
+import "../Style/Homepage.css";
+import { useEffect, useState } from "react";
+import MovieCard from "../Components/MovieCard";
 
 export const Homepage = () => {
-    return <div className="homepage">
+    const [movies, setMovies] = useState<Movie[]>([]);
 
-        <h2>Home</h2>
-        
-  </div>;
+    async function getMoviesAsync() {
+        setMovies(await GetMovies());
+    }
+
+    useEffect(() => {
+        getMoviesAsync();
+    }, []);
+
+    return (
+        <div className="homepage">
+            <div className="cards">
+                {movies.map((m, i) => {
+                    console.log(m.posterURLs);
+                    return <MovieCard key={i} title={m.title} posterURLs={m.posterURLs} />;
+                })}
+            </div>
+        </div>
+    );
 };

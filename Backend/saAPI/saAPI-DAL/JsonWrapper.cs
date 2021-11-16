@@ -37,9 +37,21 @@ namespace saAPI_DAL
             public Nl nl { get; set; }
         }
 
+        public class Prime
+        {
+            public Nl nl { get; set; }
+        }
+
+        public class Disney
+        {
+            public Nl nl { get; set; }
+        }
+
         public class StreamingInfo
         {
             public Netflix netflix { get; set; }
+            public Prime prime { get; set; }
+            public Disney disney { get; set; }
         }
 
         public class Result

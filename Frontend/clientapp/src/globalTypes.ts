@@ -18,21 +18,20 @@ export type Movie = {
     tagline: string;
     video: string;
     posterPath: string;
+    posterURLs: PosterURLs;
     age: number;
     streamingInfo: StreamingInfo;
     originalLanguage: string;
   };
 
 export type StreamingInfo = {
-    netflix: Netflix;
-};
-
-export type Netflix = {
-    nl: Nl;
-};
-
-export type Nl = {
+    service: string;
+    country: string;
     link: string;
     added: number;
     leaving: number;
+};
+
+export type PosterURLs = {
+    original: string;
 };

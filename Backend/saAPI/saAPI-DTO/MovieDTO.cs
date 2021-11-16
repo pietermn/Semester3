@@ -13,6 +13,17 @@ namespace saAPI_DTO
 
     }
 
+    public class PosterURLs
+    {
+        //public string _154 { get; set; }
+        //public string _185 { get; set; }
+        //public string _342 { get; set; }
+        //public string _500 { get; set; }
+        //public string _780 { get; set; }
+        //public string _92 { get; set; }
+        public string original { get; set; }
+    }
+
     public class MovieDTO
     {
         public string imdbID { get; set; }
@@ -34,6 +45,7 @@ namespace saAPI_DTO
         public string tagline { get; set; }
         public string video { get; set; }
         public string posterPath { get; set; }
+        public PosterURLs posterURLs { get; set; }
         public int age { get; set; }
         public StreamingInfo streamingInfo { get; set; }
         public string originalLanguage { get; set; }

@@ -1,0 +1,28 @@
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-primary: #eb6b6b;
+    --text-secondary: #ececec;
+    --bg-primary: #ffffff;
+    --bg-secondary: #333;
+    --transition-speed: 300ms;
+}
+
+.card {
+    background-color: var(--bg-secondary);
+    border-radius: 18px;
+    width: 12rem;
+    color: var(--text-primary);
+    border-style: solid;
+}
+
+.cardImage {
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    width: calc(100% - 4px);
+}
+
+.card-text {
+    margin-left: 1rem;
+}
