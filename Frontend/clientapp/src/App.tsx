@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import { Homepage as Home } from "./Pages/Home";
-import { Userpage as User } from "./Pages/User";
-import { Searchpage as Search } from "./Pages/Search";
+import Homepage from "./Pages/Home";
+import Userpage from "./Pages/User";
+import Searchpage from "./Pages/Search";
 
 import "./Style/App.css";
 import { Navbar } from "./Components/Navbar";
@@ -11,18 +11,18 @@ import { Navbar } from "./Components/Navbar";
 function App() {
     return (
         <Router>
+            <Navbar />
             <div>
-                <Navbar />
                 <div className="page-body">
                     <Switch>
                         <Route path="/search">
-                            <Search />
+                            <Searchpage />
                         </Route>
                         <Route path="/user">
-                            <User />
+                            <Userpage />
                         </Route>
                         <Route path="/">
-                            <Home />
+                            <Homepage />
                         </Route>
                     </Switch>
                 </div>

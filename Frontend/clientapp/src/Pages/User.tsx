@@ -1,9 +1,9 @@
-import '../Style/Userpage.css';
+import "../Style/Userpage.css";
 
-export const Userpage = () => {
-    return <div className="userpage">
-
-        <h2>User</h2>
-        
-  </div>;
-};
+export default function Userpage() {
+    return (
+        <div className="userpage">
+            <h2>User</h2>
+        </div>
+    );
+}

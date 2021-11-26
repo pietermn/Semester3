@@ -1,9 +1,9 @@
-import '../Style/Searchpage.css';
+import "../Style/Searchpage.css";
 
-export const Searchpage = () => {
-    return <div className="searchpage">
-
-        <h2>Search</h2>
-        
-  </div>;
-};
+export default function Searchpage() {
+    return (
+        <div className="searchpage">
+            <h2>Search</h2>
+        </div>
+    );
+}

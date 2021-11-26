@@ -4,7 +4,7 @@ import "../Style/Homepage.css";
 import { useEffect, useState } from "react";
 import MovieCard from "../Components/MovieCard";
 
-export const Homepage = () => {
+export default function Homepage() {
     const [movies, setMovies] = useState<Movie[]>([]);
 
     async function getMoviesAsync() {
@@ -25,4 +25,4 @@ export const Homepage = () => {
             </div>
         </div>
     );
-};
+}
