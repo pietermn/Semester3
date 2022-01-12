@@ -10,7 +10,7 @@ jobs:
     name: Build dbApi
     runs-on: windows-latest
     env:
-      working-directory: ./Backend/dbAPI
+      working-directory: .IP/Backend/dbAPI
     steps:
       - name: Set up JDK 11
         uses: actions/setup-java@v1
