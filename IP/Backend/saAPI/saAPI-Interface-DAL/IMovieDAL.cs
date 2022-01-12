@@ -8,6 +8,8 @@ namespace saAPI_Interface_DAL
 {
     public interface IMovieDAL
     {
-        public Task<List<MovieDTO>> GetMoviesAsync(services service, types type);
+        public Task<List<MovieDTO>> GetMoviesAsync(services service, types type, int page);
+
+        public Task<List<MovieDTO>> GetMoviesSearchAsync(services service, types type, int page, string search);
     }
 }

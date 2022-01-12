@@ -35,3 +35,24 @@ export type StreamingInfo = {
 export type PosterURLs = {
     original: string;
 };
+
+export type Services = {
+    service: number;     
+}
+
+export type Tokens = {
+    jwtToken: string;
+    refreshToken: string;
+}
+
+export type User = {
+    email: string;
+}
+
+export type WatchList = {
+    Id: Number;
+    AccountId: string;
+    imdbId: Number;
+    Title: string;
+    Watched: boolean;
+}

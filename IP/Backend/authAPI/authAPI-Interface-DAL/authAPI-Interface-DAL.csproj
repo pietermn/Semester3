@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>authAPI_Interface_DAL</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\authAPI-enums\authAPI-enums.csproj" />
+    <ProjectReference Include="..\authAPI-DTO\authAPI-DTO.csproj" />
+  </ItemGroup>
+</Project>

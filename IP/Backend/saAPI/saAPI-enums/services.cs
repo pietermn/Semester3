@@ -7,7 +7,6 @@ namespace saAPI_enums
         netflix,
         prime,
         disney,
-        starz,
         apple
     }
 }

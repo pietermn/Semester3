@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using saAPI_DTO;
 using saAPI_enums;
@@ -16,9 +17,28 @@ namespace saAPI_Logic.Containers
             _movieDAL = movieDAL;
         }
 
-        public async Task<List<MovieDTO>> GetMoviesAsync(services service, types type)
+        public async Task<List<MovieDTO>> GetMoviesAsync(List<services> services, types type, int page)
         {
-            return await _movieDAL.GetMoviesAsync(service, type);
+            List<MovieDTO> Movies = new();
+            foreach (services service in services)
+            {
+                List<MovieDTO> moviestemp = await _movieDAL.GetMoviesAsync(service, type, page);
+                Movies.AddRange(moviestemp);
+            }
+
+            return Movies;
+        }
+
+        public async Task<List<MovieDTO>> GetMoviesSearchAsync(List<services> services, types type, int page, string search)
+        {
+            List<MovieDTO> Movies = new();
+            foreach (services service in services)
+            {
+                List<MovieDTO> moviestemp = await _movieDAL.GetMoviesSearchAsync(service, type, page, search);
+                Movies.AddRange(moviestemp);
+            }
+
+            return Movies;
         }
     }
 }

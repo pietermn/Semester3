@@ -11,7 +11,7 @@ namespace dbAPI_DTO
 
         [Required]
         [ForeignKey("AccountId")]
-        public int AccountId { get; set; }
+        public string AccountId { get; set; }
 
         [Required]
         public int imdbId { get; set; }

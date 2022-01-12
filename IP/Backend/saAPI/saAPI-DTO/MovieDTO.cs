@@ -10,7 +10,6 @@ namespace saAPI_DTO
         public string link { get; set; }
         public int added { get; set; }
         public int leaving { get; set; }
-
     }
 
     public class PosterURLs

@@ -22,7 +22,7 @@ namespace dbAPI_DAL
             _Context.SaveChanges();
         }
 
-        public List<WatchListDTO> getWatchList(int accountId)
+        public List<WatchListDTO> getWatchList(string accountId)
         {
             return _Context.WatchList
                 .Where(w => w.AccountId == accountId)

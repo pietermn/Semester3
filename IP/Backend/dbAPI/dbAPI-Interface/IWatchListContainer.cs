@@ -6,7 +6,7 @@ namespace dbAPI_Interface
 {
     public interface IWatchListContainer
     {
-        public List<WatchListDTO> GetWatchList(int accountId);
+        public List<WatchListDTO> GetWatchList(string accountId);
         public void CreateWatchList(WatchListDTO watchList);
     }
 }

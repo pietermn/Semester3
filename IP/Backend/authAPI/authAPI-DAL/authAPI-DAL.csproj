@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>authAPI_DAL</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\authAPI-Interface-DAL\authAPI-Interface-DAL.csproj" />
+    <ProjectReference Include="..\authAPI-DTO\authAPI-DTO.csproj" />
+    <ProjectReference Include="..\authAPI-enums\authAPI-enums.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Firebase.Auth" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Firebase.Auth" Version="1.0.0" />
+  </ItemGroup>
+</Project>

@@ -47,11 +47,17 @@ namespace saAPI_DAL
             public Nl nl { get; set; }
         }
 
+        public class Apple
+        {
+            public Nl nl { get; set; }
+        }
+
         public class StreamingInfo
         {
             public Netflix netflix { get; set; }
             public Prime prime { get; set; }
             public Disney disney { get; set; }
+            public Apple apple { get; set; }
         }
 
         public class Result

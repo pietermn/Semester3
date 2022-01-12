@@ -35,7 +35,8 @@ namespace saAPI
         {
             Env.TraversePath().Load();
             string apiKey = Env.GetString("ApiKey");
-
+            string apiUrl = Env.GetString("ApiUrl");
+            
             services.AddScoped<IMovieContainer, MovieContainer>();
             services.AddScoped<IMovieDAL, MovieDAL>();
 

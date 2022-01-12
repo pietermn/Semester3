@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>authAPI_Logic</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Containers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Containers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\authAPI-Interfaces\authAPI-Interfaces.csproj" />
+    <ProjectReference Include="..\authAPI-DTO\authAPI-DTO.csproj" />
+    <ProjectReference Include="..\authAPI-enums\authAPI-enums.csproj" />
+    <ProjectReference Include="..\authAPI-Interface-DAL\authAPI-Interface-DAL.csproj" />
+    <ProjectReference Include="..\authAPI-DAL\authAPI-DAL.csproj" />
+  </ItemGroup>
+</Project>

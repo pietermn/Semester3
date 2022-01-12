@@ -11,6 +11,7 @@ services:
     environment:
       - ASPNETCORE_URLS=http://+:5300
       - ApiKey=6c7c427870msh77540ee5ce1cf0fp1589f8jsn9777cc8b6bb4
+      - ApiUrl=https://streaming-availability.p.rapidapi.com/search/pro
 
     ports:
       - "5300:5300"
@@ -74,7 +75,7 @@ services:
       PMA_HOST: db
     restart: always
     ports:
-      - 8080:80
+      - 8081:80
       
     networks:
       - custom-network

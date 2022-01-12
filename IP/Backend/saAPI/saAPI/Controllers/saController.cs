@@ -22,12 +22,22 @@ namespace saAPI.Controllers
             _movieContainer = movieContainer;
         }
 
-        [HttpGet]
-        [Route("Read")]
-        public async Task<ActionResult> Read(services service, types type)
+        [Route("Read"), HttpPost]
+        public IActionResult Read(List<int> services, types type, int page)
         {
-            List<MovieDTO> movies = await _movieContainer.GetMoviesAsync(service, type);
-            return Ok(movies);
+            if(page == 0) { page = 1; }
+            List<services> serv = new();
+            foreach(int s in services) { serv.Add((services)s); }
+            return Ok(_movieContainer.GetMoviesAsync(serv, type, page).Result);
+        }
+
+        [Route("ReadSearch"), HttpPost]
+        public IActionResult ReadSearch(List<int> services, types type, int page, string search)
+        {
+            if (page == 0) { page = 1; }
+            List<services> serv = new();
+            foreach (int s in services) { serv.Add((services)s); }
+            return Ok(_movieContainer.GetMoviesSearchAsync(serv, type, page, search).Result);
         }
     }
 }

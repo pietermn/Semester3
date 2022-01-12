@@ -6,7 +6,7 @@ namespace dbAPI_Interface_DAL
 {
     public interface IWatchListDAL
     {
-        public List<WatchListDTO> getWatchList(int accountId);
+        public List<WatchListDTO> getWatchList(string accountId);
         public void CreateWatchList(WatchListDTO watchList);
     }
 }

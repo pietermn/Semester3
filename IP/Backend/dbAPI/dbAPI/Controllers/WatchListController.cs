@@ -11,7 +11,7 @@ using dbAPI_DTO;
 namespace dbAPI.Controllers
 {
     [ApiController]
-    [Route("watchList")]
+    [Route("db")]
     public class WatchListController : ControllerBase
     {
         readonly IWatchListContainer _watchListContainer;
@@ -21,14 +21,14 @@ namespace dbAPI.Controllers
         }
 
         [HttpGet]
-        [Route("Get")]
-        public IActionResult Get(int accountId)
+        [Route("GetWatchList")]
+        public IActionResult Get(string accountId)
         {
             return Ok(_watchListContainer.GetWatchList(accountId));
         }
 
         [HttpPost]
-        [Route("Create")]
+        [Route("CreateWatchlist")]
         public IActionResult Create(WatchListDTO watchList)
         {
             _watchListContainer.CreateWatchList(watchList);
