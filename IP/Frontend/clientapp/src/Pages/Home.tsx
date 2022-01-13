@@ -26,9 +26,9 @@ export default function Homepage() {
     async function getMoviesAsync() {
         setPageCount(pageCount + 1);
         if (search != null) {
-            setMovies(await GetMoviesSearch([0, 1, 2, 3], 0, randomNumbr(), search));
+            setMovies(await GetMoviesSearch([0, 1, 2, 3], 0, pageCount, search));
         } else {
-            setMovies(await GetMovies([0, 1, 2, 3], 0, randomNumbr()));
+            setMovies(await GetMovies([0, 1, 2, 3], 0, pageCount));
         }
     }
 
@@ -36,9 +36,9 @@ export default function Homepage() {
         setPageCount(pageCount + 1);
         let newmovies;
         if (search != null) {
-            newmovies = await GetMoviesSearch([0, 1, 2, 3], 0, randomNumbr(), search);
+            newmovies = await GetMoviesSearch([0, 1, 2, 3], 0, pageCount, search);
         } else {
-            newmovies = await GetMovies([0, 1, 2, 3], 0, randomNumbr());
+            newmovies = await GetMovies([0, 1, 2, 3], 0, pageCount);
         }
         let tempMovies = [...movies];
         newmovies.forEach((Movie) => {

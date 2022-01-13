@@ -19,7 +19,7 @@ namespace dbAPI_Logic.Containers
             _watchListDAL.CreateWatchList(watchList);
         }
 
-        public List<WatchListDTO> GetWatchList(int accountId)
+        public List<WatchListDTO> GetWatchList(string accountId)
         {
             return _watchListDAL.getWatchList(accountId);
         }
