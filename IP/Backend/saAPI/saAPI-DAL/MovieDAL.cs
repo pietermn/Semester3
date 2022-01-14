@@ -13,7 +13,6 @@ namespace saAPI_DAL
     public class MovieDAL : IMovieDAL
     {
         string host = "streaming-availability.p.rapidapi.com";
-        string apikey = "6c7c427870msh77540ee5ce1cf0fp1589f8jsn9777cc8b6bb4";
 
         public async Task<List<MovieDTO>> GetMoviesAsync(services service, types type, int page)
         {
