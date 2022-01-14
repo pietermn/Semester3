@@ -1,5 +1,8 @@
 # Streaming Availability, Semester 3
 
+## Intro
+Streaming Availability is een webapplicatie waarmee je kunt scrollen door alle films van verschillende film streamings services. Dit zou het makkelijker moeten maken om te kunnen zien op welke website welke film staat. En wanneer je een film keuze probeert te maken zie je direct wat er allemaal beschikbaar is als keuze.
+
 ## Running the application
 ### Windows
  - Run the `start.bat` file
