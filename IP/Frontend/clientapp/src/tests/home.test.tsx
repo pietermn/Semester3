@@ -8,6 +8,10 @@ describe("HomePage", () => {
         expect(wrapper.find(".homepage").first()).toBeDefined();
     });
 
+    it("should render the navbar", () => {
+        expect(wrapper.find(".navbar").first()).toBeDefined();
+    });
+
     it("should render cards", () => {
         expect(wrapper.find(".homepage").first().find("cards").first()).toBeDefined();
     });
