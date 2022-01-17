@@ -24,6 +24,28 @@ services:
       db:
         condition: service_healthy
         
+  authApi:
+    container_name: authApi
+    image: ${DOCKER_REGISTRY-}authapi
+    build:
+      context: Backend/authApi
+      dockerfile: Dockerfile
+
+    environment:
+      - ASPNETCORE_URLS=http://+:5400
+      - ApiKey=AIzaSyDhY05vh6PirsouOR6vzdiQcNbTL1jTzoM
+
+    ports:
+      - "5400:5400"
+      - "5401:5401"
+
+    networks:
+      - custom-network
+
+    depends_on:
+      db:
+        condition: service_healthy
+        
   dbApi:
     container_name: dbApi
     image: ${DOCKER_REGISTRY-}dbapi
